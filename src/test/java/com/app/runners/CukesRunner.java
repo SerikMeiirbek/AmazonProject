@@ -13,7 +13,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		},
 		tags = "@tag", 
 		features = "src/test/resources/com/app/features/",
-		glue = "com/app/step_defenitions",
+		glue = "com/app/step_definitions/",
 		dryRun = false
 		)
 

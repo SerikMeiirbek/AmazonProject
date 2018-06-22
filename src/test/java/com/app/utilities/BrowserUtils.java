@@ -128,5 +128,14 @@ public class BrowserUtils {
 		}
 		return elemTexts;
 	}
+	public static String returnDigits(String string) {
+		String newString = "";
+		for(int i=0;i<string.length();i++) {
+			if(Character.isDigit(string.charAt(i))){
+				newString+=string.charAt(i);
+			}
+		}
+		return newString;
+	}
 	
 }

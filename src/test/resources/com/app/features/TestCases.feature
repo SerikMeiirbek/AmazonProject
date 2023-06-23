@@ -1,9 +1,10 @@
 Feature: Searching for items
 
-  Background: used to search Selenium coockbook
+  Background: used to search Selenium cookbook
     Given I am on Amazon.com
-    When Search for "Selenium coockbook"
+    When Search for "Selenium cookbook"
 
+  @tag
   Scenario: Search results
     And Save the number of results to resultsOfSearch
     Then Click on category link Books
@@ -11,7 +12,7 @@ Feature: Searching for items
     And Click on Any Category link
     Then Verify that number of results is same as resultsOfSearch
 
-  @tag
+
   Scenario: Price displayed
     Then Click on category link Books
     Then Save the price listed under Selenium Testing Tools Cookbook - Second Edition, Paperback
@@ -21,7 +22,7 @@ Feature: Searching for items
   Scenario: Total price
     And Click on results Selenium Testing Tools Cookbook - Second Edition
     Then Save the price
-    And ClickonAddtoCart
+    And Click on Add to Cart
     Then Search for OCA: Oracle Certified Associate Java SE 8 Programmer I Study Guide
     And OCA: Oracle Certified Associate Java SE 8 Programmer I Study Guide: Exam 1Z0-808
     Then Save the price
@@ -30,8 +31,8 @@ Feature: Searching for items
 
   Scenario: Removing items from cart
     And Click on results Selenium Testing Tools Cookbook - Second Edition
-		And Click on Add to Cart
-		Then Search for OCA: Oracle Certified Associate Java SE 8 Programmer I Study Guide
+    And Click on Add to Cart
+    Then Search for OCA: Oracle Certified Associate Java SE 8 Programmer I Study Guide
     And OCA: Oracle Certified Associate Java SE 8 Programmer I Study Guide: Exam 1Z0-808
     Then Save the price
     And Click on Add to Cart
@@ -42,5 +43,5 @@ Feature: Searching for items
     Then Remove that item
     Then Verify text Subtotal has text 1 item next to the price
     And Verify the new subtotal price based previous subtotal and the price of the item removed
-    
+
 		

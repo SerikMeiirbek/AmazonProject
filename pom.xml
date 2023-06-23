@@ -23,62 +23,85 @@
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>2.1.0</version>
+			<version>5.4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>2.4.0</version>
+			<version>7.11.1</version>
 		</dependency>
-		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-testng</artifactId>
-			<version>2.4.0</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>io.cucumber</groupId>-->
+<!--			<artifactId>cucumber-testng</artifactId>-->
+<!--			<version>7.11.1</version>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>net.masterthought</groupId>
 			<artifactId>cucumber-sandwich</artifactId>
 			<version>3.15.0</version>
 		</dependency>
-		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>7.11.1</version>
+		</dependency>
+
 	</dependencies>
+
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.21.0</version>
-				<configuration>
-					<suiteXmlFiles> 
-					<!-- this line tell maven surefire plugin which file should be executed -->
-						<suiteXmlFile>testng_runner.xml</suiteXmlFile>
-					</suiteXmlFiles>
-					<testFailureIgnore>true</testFailureIgnore>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>net.masterthought</groupId>
-				<artifactId>maven-cucumber-reporting</artifactId>
-				<version>3.15.0</version>
-				<executions>
-					<execution>
-						<id>execution</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<projectname>TestProject</projectname> 
-							<!-- path to the report that will be generated -->
-							<outputdirectory>${project.build.directory}/cucumber-html-reports</outputdirectory> 
-							<!-- path to the json file taht will be used to genetrate report --> 
-							<!-- it has to match the one on the cukesrunner -->
-							<cucumberoutput>${project.build.directory}/target/cucumber.json</cucumberoutput>
-							<enableflashcharts></enableflashcharts>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+<!--			<plugin>-->
+<!--				<groupId>org.apache.maven.plugins</groupId>-->
+<!--				<artifactId>maven-surefire-plugin</artifactId>-->
+<!--				<version>2.21.0</version>-->
+<!--				<configuration>-->
+<!--					<suiteXmlFiles> -->
+<!--					&lt;!&ndash; this line tell maven surefire plugin which file should be executed &ndash;&gt;-->
+<!--						<suiteXmlFile>testng_runner.xml</suiteXmlFile>-->
+<!--					</suiteXmlFiles>-->
+<!--					<testFailureIgnore>true</testFailureIgnore>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
+<!--			<plugin>-->
+<!--				<groupId>net.masterthought</groupId>-->
+<!--				<artifactId>maven-cucumber-reporting</artifactId>-->
+<!--				<version>3.15.0</version>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<id>execution</id>-->
+<!--						<phase>verify</phase>-->
+<!--						<goals>-->
+<!--							<goal>generate</goal>-->
+<!--						</goals>-->
+<!--						<configuration>-->
+<!--							<projectname>TestProject</projectname>-->
+<!--							&lt;!&ndash; path to the report that will be generated &ndash;&gt;-->
+<!--							<outputdirectory>${project.build.directory}/cucumber-html-reports</outputdirectory>-->
+<!--							&lt;!&ndash; path to the json file taht will be used to genetrate report &ndash;&gt;-->
+<!--							&lt;!&ndash; it has to match the one on the cukesrunner &ndash;&gt;-->
+<!--							<cucumberoutput>${project.build.directory}/target/cucumber.json</cucumberoutput>-->
+<!--							<enableflashcharts></enableflashcharts>-->
+<!--						</configuration>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--			</plugin>-->
+
+<!--			<plugin>-->
+<!--				<groupId>org.apache.maven.plugins</groupId>-->
+<!--				<artifactId>maven-war-plugin</artifactId>-->
+<!--				<version>4.0.0</version>-->
+<!--			</plugin>-->
+<!--			<plugin>-->
+<!--				<groupId>org.apache.maven.plugins</groupId>-->
+<!--				<artifactId>maven-compiler-plugin</artifactId>-->
+<!--				<version>3.8.1</version>-->
+<!--			</plugin>-->
 		</plugins>
 	</build>
 
